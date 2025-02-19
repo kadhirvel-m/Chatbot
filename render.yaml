@@ -1,0 +1,9 @@
+services:
+  - type: web
+    name: mental-health-chatbot
+    env: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: python app.py
+    envVars:
+      - key: PORT
+        value: 10000  # Render automatically assigns a port, so leave this unset unless needed

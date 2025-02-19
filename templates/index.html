@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mental Health Chatbot</title>
+    <link rel="stylesheet" href="static/css/styles.css">
+</head>
+<body>
+    <div class="formbold-main-wrapper">
+        <div class="formbold-form-wrapper">
+            <h2>Mental Health Chatbot - Tell us about yourself</h2>
+            <form method="POST">
+
+                <!-- Personal Details -->
+                <div class="formbold-input-flex">
+                    <div>
+                        <input type="text" name="name" id="name" placeholder="Enter your Name" class="formbold-form-input" required />
+                        <label for="name" class="formbold-form-label">Name</label>
+                    </div>
+                    
+                </div>
+
+                <div class="formbold-input-flex">
+                    <div>
+                        <input type="number" name="age" id="age" placeholder="Enter your Age" class="formbold-form-input" required />
+                        <label for="age" class="formbold-form-label">Age</label>
+                    </div>
+                    <div>
+                        <select name="gender" id="gender" class="formbold-form-input" required>
+                            <option value="" disabled selected>Select your Gender</option>
+                            <option value="Male">Male</option>
+                            <option value="Female">Female</option>
+                            <option value="Non-binary">Non-binary</option>
+                            <option value="Prefer not to say">Prefer not to say</option>
+                        </select>
+                        <label for="gender" class="formbold-form-label">Gender</label>
+                    </div>
+                </div>
+
+                <!-- Mental Health Status -->
+                <div class="formbold-input-flex">
+                    <div>
+                        <select name="mood" id="mood" class="formbold-form-input" required>
+                            <option value="" disabled selected>How are you feeling today?</option>
+                            <option value="Happy">Happy</option>
+                            <option value="Sad">Sad</option>
+                            <option value="Anxious">Anxious</option>
+                            <option value="Stressed">Stressed</option>
+                            <option value="Neutral">Neutral</option>
+                        </select>
+                        <label for="mood" class="formbold-form-label">Current Mood</label>
+                    </div>
+                    <div>
+                        <input type="number" name="stress_level" id="stress_level" min="1" max="10" placeholder="Rate your stress (1-10)" class="formbold-form-input" required />
+                        <label for="stress_level" class="formbold-form-label">Stress Level</label>
+                    </div>
+                </div>
+
+                <div class="formbold-input-flex">
+                    <div>
+                        <input type="number" name="sleep_hours" id="sleep_hours" min="1" max="24" placeholder="Hours of Sleep" class="formbold-form-input" required />
+                        <label for="sleep_hours" class="formbold-form-label">Sleep Hours per Night</label>
+                    </div>
+                    <div>
+                        <input type="text" name="exercise" id="exercise" placeholder="Physical Activity (e.g., Walking, Gym)" class="formbold-form-input" />
+                        <label for="exercise" class="formbold-form-label">Physical Activity</label>
+                    </div>
+                </div>
+
+                <!-- Lifestyle & Habits -->
+                <div class="formbold-textarea">
+                    <textarea name="daily_routine" id="daily_routine" rows="4" placeholder="Describe your daily routine" class="formbold-form-input"></textarea>
+                    <label for="daily_routine" class="formbold-form-label">Daily Routine</label>
+                </div>
+
+                <div class="formbold-textarea">
+                    <textarea name="hobbies" id="hobbies" rows="4" placeholder="What hobbies make you happy?" class="formbold-form-input"></textarea>
+                    <label for="hobbies" class="formbold-form-label">Hobbies & Interests</label>
+                </div>
+
+                <button class="formbold-btn">Start Chat</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
